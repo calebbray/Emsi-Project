@@ -1,0 +1,141 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Occupation Overview</title>
+        <meta charset="UTF-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>Occupation Overview</h1>
+        <p class="occupationInfo"></p>
+        <p class="pHead para-bold"></p>
+        <hr class="enclose-top tint">
+        <div class="summary-data">
+            <div>
+                <p class="section-head" id="jobsTotal"></p>
+                <p class="section-middle" id="jobsYear"></p>
+                <p id="vsNA"></p>
+            </div>
+            <div class="border pad-sides">
+                <p class="section-head" id="percentage"></p>
+                <p class="section-middle" id="yChange"></p>
+                <p id="nPercentage"></p>
+            </div>
+            <div >
+                <p class="section-head" id="rate"></p>
+                <p class="section-middle">Median Hourly Earnings</p>
+                <p id="nRate"></p>
+            </div>
+        </div>
+        <hr class="enclose-bottom tint">
+            <p class="para-bold pad-top">Regional Trends</p>
+        <hr class="tint">
+        <div class="graph-container">
+            <canvas id="graph" height="200" width="700"></canvas>
+        </div>
+        <div>
+              <table width="100%">
+                  <thead>
+                      <tr class="row-1 odd">
+                          <td class="column-0"></td>
+                          <th class="column-1">Region</th>
+                          <th class="column-2" id="startYear">2013 Jobs</th>
+                          <th class="column-3" id="endYear">2018 Jobs</th>
+                          <th class="column-4">Change</th>
+                          <th class="column-5">% Change</th>
+                      </tr>
+                  </thead>
+                  <tbody class="row-hover">
+                      <tr class="row-2 even">
+                          <td class="column-0">
+                              <svg height="40" width="40">
+                                  <circle cx="25" cy="25" r="5" stroke="#000f71" stroke-width="1" fill="#000f71" />
+                              </svg>
+                          </td>
+                          <td class="column-1">Region</td>
+                          <td class="column-2" id="rJobsStart"></td>
+                          <td class="column-3" id="rJobsEnd"></td>
+                          <td class="column-4" id="rChange"></td>
+                          <td class="column-5" id="rpChange"></td>
+                      </tr>
+                      <tr class="row-3 odd">
+                          <td class="column-0">
+                            <svg height="40" width="40">
+                                <rect x="19" y="18" height="12" width="12"  stroke="#43a9d1" stroke-width="1" fill="#43a9d1" />
+                            </svg>
+                          </td>
+                          <td class="column-1">State</td>
+                          <td class="column-2" id="sJobsStart"></td>
+                          <td class="column-3" id="sJobsEnd"></td>
+                          <td class="column-4" id="sChange"></td>
+                          <td class="column-5" id="spChange"></td>
+                      </tr>
+                      <tr class="row-4 even">
+                          <td class="column-0">
+                            <svg height="40" width="40">
+                                <polygon points="20,30 25,20 30,30" stroke="#c8edff" stroke-width="1" fill="#c8edff" />
+                            </svg>
+                          </td>
+                          <td class="column-1">Nation</td>
+                          <td class="column-2" id="nJobsStart"></td>
+                          <td class="column-3" id="nJobsEnd"></td>
+                          <td class="column-4" id="nChange"></td>
+                          <td class="column-5" id="npChange"></td>
+                      </tr>
+                  </tbody>
+              </table>
+        </div>
+
+        <p  class="pad-top" id="industryStats"></p>
+        <hr class="tint">
+
+        <div>
+              <table width="100%">
+                  <thead>
+                      <tr>
+                          <th class="column-1">Industry</th>
+                          <th class="column-2" id="col2H"></th>
+                          <th class="column-3" id="col3H"></th>
+                          <th class="column-4" id="col4H"></th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td class="column-1 job-title" id="jobTitle0"></td>
+                          <td class="column-2" id="iJobs0"></td>
+                          <td class="column-3" id="pJobs0"></td>
+                          <td class="column-4" id="pTJobs0"></td>
+                      </tr>
+                      <tr>
+                          <td class="column-1 job-title" id="jobTitle1"></td>
+                          <td class="column-2" id="iJobs1"></td>
+                          <td class="column-3" id="pJobs1"></td>
+                          <td class="column-4" id="pTJobs1"></td>
+                      </tr>
+                      <tr>
+                          <td class="column-1 job-title" id="jobTitle2"></td>
+                          <td class="column-2" id="iJobs2"></td>
+                          <td class="column-3" id="pJobs2"></td>
+                          <td class="column-4" id="pTJobs2"></td>
+                      </tr>
+                      <tr>
+                          <td class="column-1 job-title" id="jobTitle3"></td>
+                          <td class="column-2" id="iJobs3"></td>
+                          <td class="column-3" id="pJobs3"></td>
+                          <td class="column-4" id="pTJobs3"></td>
+                      </tr>
+                      <tr>
+                          <td class="column-1 job-title" id="jobTitle4"></td>
+                          <td class="column-2" id="iJobs4"></td>
+                          <td class="column-3" id="pJobs4"></td>
+                          <td class="column-4" id="pTJobs4"></td>
+                      </tr>
+
+                  </tbody>
+              </table>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>
