@@ -7,7 +7,7 @@ The data shows statistics on growth and numbers of jobs for computer programmers
 in regional, state, and national categories.
 
 In order to run this project, I would suggest two options. Either create a local host
-to view the webpage in Google Chrome (I created this page using the Atom IDE and their
+to view the webpage in Google Chrome (I created this page using the Atom text editor and their
 live server add on). The webpage can also be opened dragging the index.html file onto
 Firefox.
 
