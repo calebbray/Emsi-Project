@@ -1,5 +1,5 @@
-#Emsi Project
-##by Caleb Bray
+# Emsi Project
+## by Caleb Bray
 
 This is my project that I completed for my interview with Emsi. My task was to take
 JSON data and use it to create a page that displays the information given.
@@ -11,7 +11,7 @@ to view the webpage in Google Chrome (I created this page using the Atom text ed
 live server add on). The webpage can also be opened dragging the index.html file onto
 Firefox.
 
-###Note to the reviewer:
+### Note to the reviewer:
 The mock up shows data ranging from the years 2001 - 2025.
 However there is only complete data for the years 2013 - 2017. In the mockup, this makes
 the growth rate of the nations computer programmers to be roughly 2% slower than Regional
